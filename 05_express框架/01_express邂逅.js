@@ -7,9 +7,11 @@ const app = express()
 // 監聽默認路徑
 app.get('/', (req, res, next) => {
   res.end("Hello Express")
+  next()
 })
 app.post('/', (req, res, next) => {
   res.end("Hello POST Express")
+  next()
 })
 
 app.post('/login', (req, res, next) => {
